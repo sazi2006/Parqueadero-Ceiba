@@ -1,5 +1,7 @@
 package co.com.ceiba.parqueadero.persistencia;
 
+import java.time.LocalDateTime;
+
 import co.com.ceiba.parqueadero.constantes.Constantes;
 import co.com.ceiba.parqueadero.dominio.Carro;
 import co.com.ceiba.parqueadero.dominio.Moto;
@@ -7,8 +9,7 @@ import co.com.ceiba.parqueadero.dominio.Vehiculo;
 
 public class ParqueaderoBuilder {
 
-	private ParqueaderoBuilder() {		
-		// TODO Auto-generated constructor stub
+	private ParqueaderoBuilder() {
 	}
 	
 	public static Vehiculo convertirADominio(ParqueaderoEntidad parqueaderoEntidad) {
@@ -30,7 +31,7 @@ public class ParqueaderoBuilder {
 		ParqueaderoEntidad parqueaderoEntidad = new ParqueaderoEntidad();
 		parqueaderoEntidad.setPlaca(vehiculo.getPlaca());
 		parqueaderoEntidad.setTipoVehiculo(vehiculo.getTipoVehiculo());
-		parqueaderoEntidad.setFechaIngreso(vehiculo.getFechaIngreso());
+		parqueaderoEntidad.setFechaIngreso(LocalDateTime.now());
 		parqueaderoEntidad.setFechaSalida(vehiculo.getFechaSalida());
 		parqueaderoEntidad.setValorCobrar(vehiculo.getValorCobrar());
 		

@@ -1,5 +1,8 @@
 package co.com.ceiba.parqueadero.persistencia;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,12 +31,21 @@ public class RepositorioParqueaderoImpl {
 		repositorioParqueadero.save(parqueaderoEntidad);
 	}
 	
-	public Vehiculo buscarVehiculo(String placa) {
-		ParqueaderoEntidad parqueaderoEntidad = repositorioParqueadero.findByPlaca(placa);
+	public Vehiculo buscarVehiculo(String placa, String tipoVehiculo, String estado) {
+		ParqueaderoEntidad parqueaderoEntidad = repositorioParqueadero.findByPlacaAndTipoVehiculoAndEstado(placa, tipoVehiculo, estado);
 		return ParqueaderoBuilder.convertirADominio(parqueaderoEntidad);
 	}
 	
 	public long contarVehiculos(String tipoVehiculo, String estado) {
 		return repositorioParqueadero.countByTipoVehiculoAndEstado(tipoVehiculo, estado);
+	}
+	
+	public List<Vehiculo> consultarVehiculos(String estado) {
+		List<Vehiculo> parqueadero = new ArrayList<>();
+		List<ParqueaderoEntidad> parqueaderoEntidad = repositorioParqueadero.findByEstado(estado);
+		for(ParqueaderoEntidad vehiculo : parqueaderoEntidad) {
+			parqueadero.add(ParqueaderoBuilder.convertirADominio(vehiculo));
+		}
+		return parqueadero;
 	}
 }

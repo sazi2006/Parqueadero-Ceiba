@@ -15,7 +15,6 @@ public class ValidarDisponibilidad implements Validacion{
 
 	@Override
 	public void realizarValidacion(Vehiculo vehiculo) {
-		// TODO Auto-generated method stub
 		long cantidadVehiculos = repositorioParqueaderoImpl.contarVehiculos(vehiculo.getTipoVehiculo(), Constantes.VEHICULO_ACTIVO);
 		
 		if (vehiculo.getTipoVehiculo().equals(Constantes.TIPO_CARRO) && cantidadVehiculos >= Constantes.CAPACIDAD_CARROS) {

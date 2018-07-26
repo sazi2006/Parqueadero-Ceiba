@@ -9,6 +9,5 @@ public class IngresoExcepcion extends RuntimeException{
 
 	public IngresoExcepcion(String message) {
 		super(message);
-		// TODO Auto-generated constructor stub
 	}
 }
