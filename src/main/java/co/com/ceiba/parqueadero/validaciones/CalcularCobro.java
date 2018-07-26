@@ -26,7 +26,7 @@ public class CalcularCobro implements Validacion{
 	
 	public void calcularCobro(Vehiculo vehiculo, double valorDia, double valorHora, double valorAdicional) {
 		double valorCobrar = valorAdicional;
-		double horas = Math.ceil(Duration.between(vehiculo.getFechaIngreso(), vehiculo.getFechaSalida()).toHours());
+		double horas = Duration.between(vehiculo.getFechaIngreso(), vehiculo.getFechaSalida()).toHours();
 		
 		if (horas == 0) {
 			horas++;			

@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import co.com.ceiba.parqueadero.constantes.Constantes;
+import co.com.ceiba.parqueadero.excepcion.IngresoExcepcion;
 import co.com.ceiba.parqueadero.persistencia.RepositorioParqueaderoImpl;
 import co.com.ceiba.parqueadero.validaciones.CalcularCobro;
 import co.com.ceiba.parqueadero.validaciones.Validacion;
@@ -35,7 +36,7 @@ public class Vigilante {
 			validacionesIngreso.forEach(validacion -> validacion.realizarValidacion(vehiculo));
 			repositorioParqueaderoImpl.ingresarVehiculo(vehiculo);
 			msg = "El vehículo con placa "+vehiculo.getPlaca()+" se ingresó exitosamente";
-		} catch (Exception e) {
+		} catch (IngresoExcepcion e) {
 			msg = e.getMessage();
 		}
 		return msg;
