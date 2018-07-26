@@ -169,7 +169,7 @@ public class VigilanteTest {
 	@Test
 	public void calcularCobroHorasMotoMayor9Test() {
 		ParqueaderoTestDataBuilder parqueaderoTestDataBuilder = new ParqueaderoTestDataBuilder("Moto");
-		Vehiculo vehiculo = parqueaderoTestDataBuilder.setFechaIngreso(LocalDateTime.parse("2018-06-11T07:00:00")).setFechaSalida(LocalDateTime.parse("2018-06-12T07:00:00")).build();
+		Vehiculo vehiculo = parqueaderoTestDataBuilder.setFechaIngreso(LocalDateTime.parse("2018-07-25T07:00:00")).setFechaSalida(LocalDateTime.parse("2018-07-26T07:00:00")).build();
 		
 		CalcularCobro calcularCobro = new CalcularCobro();
 		
@@ -180,7 +180,7 @@ public class VigilanteTest {
 	@Test
 	public void calcularCobroCilindrajeMenor500ccTest() {
 		ParqueaderoTestDataBuilder parqueaderoTestDataBuilder = new ParqueaderoTestDataBuilder("Moto");
-		Vehiculo vehiculo = parqueaderoTestDataBuilder.setCilindraje(500).setFechaIngreso(LocalDateTime.parse("2018-06-11T07:00:00")).setFechaSalida(LocalDateTime.parse("2018-06-11T10:00:00")).build();
+		Vehiculo vehiculo = parqueaderoTestDataBuilder.setCilindraje(500).setFechaIngreso(LocalDateTime.parse("2018-07-25T07:00:00")).setFechaSalida(LocalDateTime.parse("2018-07-25T10:00:00")).build();
 		
 		CalcularCobro calcularCobro = new CalcularCobro();
 		
@@ -191,7 +191,7 @@ public class VigilanteTest {
 	@Test
 	public void calcularCobroCilindrajeMayor500ccTest() {
 		ParqueaderoTestDataBuilder parqueaderoTestDataBuilder = new ParqueaderoTestDataBuilder("Moto");
-		Vehiculo vehiculo = parqueaderoTestDataBuilder.setCilindraje(600).setFechaIngreso(LocalDateTime.parse("2018-06-11T07:00:00")).setFechaSalida(LocalDateTime.parse("2018-06-11T10:00:00")).build();
+		Vehiculo vehiculo = parqueaderoTestDataBuilder.setCilindraje(600).setFechaIngreso(LocalDateTime.parse("2018-07-25T07:00:00")).setFechaSalida(LocalDateTime.parse("2018-07-25T10:00:00")).build();
 		
 		CalcularCobro calcularCobro = new CalcularCobro();
 		
