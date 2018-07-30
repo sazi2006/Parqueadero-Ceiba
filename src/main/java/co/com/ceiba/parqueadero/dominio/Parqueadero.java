@@ -48,9 +48,9 @@ public class Parqueadero implements Serializable{
 	
 	public Vehiculo crearVehiculo() {
 		if (getTipoVehiculo().equals(Constantes.TIPO_CARRO)) {
-			return new Carro(getPlaca(), getTipoVehiculo(), getFechaIngreso(), getFechaSalida(), getValorCobrar());
+			return new Carro(getPlaca(), getTipoVehiculo(), LocalDateTime.now(), getFechaSalida(), getValorCobrar());
 		}else {
-			return new Moto(getPlaca(), getTipoVehiculo(), getCilindraje(), getFechaIngreso(), getFechaSalida(), getValorCobrar());
+			return new Moto(getPlaca(), getTipoVehiculo(), getCilindraje(), LocalDateTime.now(), getFechaSalida(), getValorCobrar());
 		}
 	}	
 

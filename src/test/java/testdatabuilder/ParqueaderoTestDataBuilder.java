@@ -8,7 +8,7 @@ import co.com.ceiba.parqueadero.dominio.Vehiculo;
 
 public class ParqueaderoTestDataBuilder {
 	
-	private static final String PLACA = "RMS020";
+	private static final String PLACA = "AMS020";
 	private static final LocalDateTime FECHA_INGRESO = LocalDateTime.now();
 	
 	String placa;

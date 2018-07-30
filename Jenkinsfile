@@ -32,7 +32,7 @@ pipeline {
 		 
 		 stage('Compile') {
 			steps{
-				echo "------------>Unit Tests<------------"
+				echo "------------>Compile<------------"
 				sh 'gradle --b ./build.gradle compileJava'
 			}
 		 }
@@ -40,8 +40,8 @@ pipeline {
 		 stage('Unit Tests') {
 			steps{
 				echo "------------>Unit Tests<------------"
-				sh 'gradle --b ./build.gradle test'
-		//		junit '**/build/test-results/test/*.xml' //aggregate test results - JUnit
+				sh 'gradle test'
+				junit '**/jacoco/test-results/*.xml'
 			}
 		}
 		 

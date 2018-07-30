@@ -18,7 +18,7 @@ import co.com.ceiba.parqueadero.persistencia.RepositorioParqueaderoImpl;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/v1")
+@RequestMapping()
 public class ParqueaderoController {
 	
 	@Autowired

@@ -3,6 +3,10 @@ package co.com.ceiba.parqueadero.dominio;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+
+@JsonRootName(value = "vehiculo")
 public class Vehiculo implements Serializable{
 
 	/**
@@ -10,10 +14,19 @@ public class Vehiculo implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	@JsonProperty
 	String placa;
+	
+	@JsonProperty
 	String tipoVehiculo;
+	
+	@JsonProperty
 	LocalDateTime fechaIngreso;
+	
+	@JsonProperty
 	LocalDateTime fechaSalida;
+	
+	@JsonProperty
 	double valorCobrar;
 	
 	public Vehiculo() {
