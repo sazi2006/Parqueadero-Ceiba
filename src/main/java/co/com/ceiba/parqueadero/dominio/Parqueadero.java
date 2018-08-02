@@ -18,8 +18,9 @@ public class Parqueadero implements Serializable{
 	LocalDateTime fechaSalida;
 	double valorCobrar;
 	double cilindraje;
-	
+
 	public Parqueadero() {
+		super();
 	}
 
 	public String getPlaca() {

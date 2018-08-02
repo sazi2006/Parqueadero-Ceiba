@@ -2,6 +2,10 @@ package co.com.ceiba.parqueadero.constantes;
 
 public class Constantes {
 	
+	private Constantes() {
+	    throw new IllegalStateException("Utility class");
+	  }
+	
 	public static final String TIPO_CARRO = "Carro";
 	public static final String TIPO_MOTO = "Moto";
 	public static final double VALOR_HORA_CARRO = 1000;
