@@ -1,6 +1,6 @@
 package co.com.ceiba.parqueadero.constantes;
 
-public class Constantes {
+public final class Constantes {
 	
 	private Constantes() {
 	    throw new IllegalStateException("Utility class");
